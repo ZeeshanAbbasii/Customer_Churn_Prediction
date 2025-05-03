@@ -1,43 +1,117 @@
-# 📊 Customer Churn Prediction App
 
-This is an interactive machine learning application built with **Streamlit** to predict whether a customer is likely to churn based on various features.
+# 📊 Customer Churn Prediction
 
-## 🚀 How It Works
+A full machine learning pipeline built to **predict customer churn** using the Telco Customer dataset. The project includes preprocessing, model training, evaluation, visualization, and a Streamlit web app for real-time predictions.
 
-- Loads a pre-trained Logistic Regression model.
-- Accepts numeric input for features.
-- Predicts churn using the provided values.
-- Provides feedback on whether a customer is likely to stay or churn.
+---
 
-## 🧠 Model Used
+## 🔍 Features
 
-- **Logistic Regression**
-- Trained on the Telco Customer Churn dataset.
-- Stored in `models/logistic_regression_model.pkl`.
+- Data Cleaning and Preprocessing
+- Feature Engineering
+- Multiple ML Models (Logistic Regression, Random Forest, XGBoost, LightGBM, SVM, KNN, MLP, CatBoost, Gradient Boosting)
+- Model Evaluation & Comparison
+- Interactive Streamlit App for Predictions
+- Visual Insights with Seaborn and Matplotlib
+- GitHub-ready project structure
 
-## 📁 Project Structure
+---
 
+## 🧠 Models Used
+
+- Logistic Regression
+- Random Forest
+- XGBoost
+- LightGBM
+- Support Vector Machine
+- K-Nearest Neighbors
+- Multi-Layer Perceptron
+- CatBoost
+- Gradient Boosting
+
+---
+
+## 💾 Dataset
+
+- Source: Cleaned version of Telco Customer Churn Dataset
+- Files: 
+  - `data/Telco-Customer-Churn-dataset-cleaned.csv`
+  - `data/cleaned_customer_churn_dataset.csv`
+
+---
+
+## 📂 Folder Structure
+
+```
 Customer_Churn_Prediction/
-│
-├── src/
-│   └── predict.py
-├── models/
+├── app.py                        # Streamlit app
+├── requirements.txt             # Python dependencies
+├── README.md                    # Project documentation
+├── data/                        # Raw and cleaned datasets
+├── src/                         # Source code for training, predicting, evaluation
+│   ├── preprocess.py
+│   ├── train.py
+│   ├── predict.py
+│   └── evaluate.py
+├── models/                      # Saved model and features
 │   ├── logistic_regression_model.pkl
 │   └── model_features.pkl
-├── data/
-│   └── cleaned_customer_churn_dataset.csv
-├── app.py
-├── requirements.txt
-└── README.md
+├── visuals/                     # All saved plots
+├── notebooks/                   # Jupyter notebook with full analysis
+│   └── customer_churn_analysis.ipynb
+```
 
-## 🧪 Run Locally
+---
+
+## 🚀 How to Run Locally
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/ZeeshanAbbasii/Customer_Churn_Prediction.git
+cd Customer_Churn_Prediction
+```
+
+2. **Install dependencies**
 
 ```bash
 pip install -r requirements.txt
+```
+
+3. **Run the Streamlit app**
+
+```bash
 streamlit run app.py
+```
 
-🌐 Deployment
+---
 
-Deployed via Streamlit Cloud.
+## 🌐 Streamlit Cloud Deployment
 
-📌 Built with ❤️ by Zeeshan 
+> Use `app.py` as the entry point.
+
+---
+
+## 🖼️ Visual Insights
+
+Stored in `visuals/`:
+- `churn_insights.png`
+- `contract_vs_churn.png`
+- `payment_method_vs_churn.png`
+- `satisfaction_score_violinplot.png`
+- `techsupport_vs_churn.png`
+- `totalcharges_violinplot.png`
+
+---
+
+## 👨‍💻 Author
+
+**Zeeshan Abbasi**  
+Software Engineering Student  
+GitHub: [ZeeshanAbbasii](https://github.com/ZeeshanAbbasii)
+
+---
+
+## 📌 Disclaimer
+
+This project is for educational purposes only. Predictions should not be used in real business decisions without further validation.
